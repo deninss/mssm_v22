@@ -1,0 +1,129 @@
+﻿@model ProjectModel
+@{
+}
+<div class="container-addgroups">
+    <h3>Проект: @Model.Name</h3>
+    <div class="container-team-project">
+        <div class="getProject">
+            <div class="content-ND small">
+                <div class="content-TND">
+                    <div class="content-ID">
+                        <h4>Разработка</h4> 
+                    </div>
+                    <input class="input-text" value="@Model.Name" placeholder="Название проекта" disabled/>
+                    <textarea class="input-text-descriptionvv" type="text" placeholder="Описание..." disabled>@Model.Description</textarea>
+                    @if (Model.StartDate != null || Model.EndDate != null)
+                    {
+                        <div class="input-group-project-date">
+                            <input type="date" value="@Model.StartDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="start-date-project" name="start-date" disabled>
+                            <input type="date" value="@Model.EndDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="end-date-project" name="end-date" disabled>
+                        </div>
+                    }
+                </div>
+            </div>
+           
+            @foreach (var task in Model.TaskModel)
+            {
+                <div class="new-Task small">
+                    <div class="content-TND">
+                        <div class="content-ID">
+                            <input class="input-text" value="@task.Name" placeholder="Название задачи" disabled/>
+                        </div>
+                        <textarea class="input-text-descriptionvv" type="text" placeholder="Описание..." disabled>@task.Description</textarea>
+                        @if (task.StartDate != null || task.EndDate != null)
+                        {
+                            <div class="input-group-project-date">
+                                <input type="date" value="@task.StartDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="start-date-task" name="start-date" disabled>
+                                <input type="date" value="@task.EndDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="end-date-team" name="end-date" disabled>
+                            </div>
+                        }
+                    </div>
+
+                    @if (task.SubtasksModel != null)
+                    {
+                        @foreach (var subtask in task.SubtasksModel)
+                        {
+                            <div class="subtasks">
+                                <div class="container-subtasks">
+                                    <textarea class="input-text-description" type="text" placeholder="Описание..." disabled>@subtask.Description</textarea>
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div class="item-user">
+                        <div>
+                            @if (task.TypeId != null)
+                            {
+                                <select id="status-task" disabled>
+                                    <option id="1" @(task.TypeId == 1 ? "selected" : "")>важно, срочно</option>
+                                    <option id="2" @(task.TypeId == 2 ? "selected" : "")>важно, не срочно</option>
+                                    <option id="3" @(task.TypeId == 3 ? "selected" : "")>неважно, срочно</option>
+                                    <option id="4" @(task.TypeId == 4 ? "selected" : "")>неважно, не срочно</option>
+                                </select>
+                            }
+                        </div>
+                        @foreach (var executeUser in task.Executor)
+                        {
+                            <img class="input-img" src="~/Img/user.svg" />
+                        }
+                    </div>
+                </div>
+            }
+             
+        </div>
+        <div class="detailsProject">
+            <ol class="content-PB" style="--length: 100" role="list">
+                @if (Model.Status != 2)
+                {
+                    <li class="item-PB" style="--i: @(100.0 - Math.Round(((Model.EndDate.Value - DateTime.Now).TotalDays / (Model.EndDate.Value - Model.StartDate.Value).TotalDays) * 100.0, MidpointRounding.AwayFromZero))">
+                        <h3>До завершения проекта: @(Model.EndDate.Value.Subtract(DateTime.Now.Date).Days) дней</h3>
+                    </li>
+                }
+                <li class="item-PB" style="--i: @(Math.Round((double)Model.TaskModel.Where(c => c.Status == 2).Count() / Model.TaskModel.Count() * 100.0, MidpointRounding.AwayFromZero))">
+                    <h3>Количество выполненных задач: @Model.TaskModel.Where(c => c.Status == 2).Count() из @Model.TaskModel.Count()</h3>
+                    <ul>
+                        @foreach (var completedTasks in Model.TaskModel.Where(c => c.Status == 2))
+                        {
+                            <li>
+                                <span class="name">@completedTasks.Name</span>
+                            </li>
+                        }
+                    </ul>
+                </li>
+                <li class="item-PB" style="--i: @(Math.Round((double)Model.TaskModel.Where(c => c.Status == 0 || c.Status == 1).Count() / Model.TaskModel.Count() * 100.0, MidpointRounding.AwayFromZero))">
+                    <h3>Количество оставшихся задач: @Model.TaskModel.Where(c => c.Status == 0 || c.Status == 1).Count() из @Model.TaskModel.Count()</h3>
+                    <ul>
+                        @foreach (var unfulfilledTasks in Model.TaskModel.Where(c => c.Status == 0 || c.Status == 1))
+                        {
+                            <li>
+                                <span class="name">@unfulfilledTasks.Name</span>
+                            </li>
+                        }
+                    </ul>
+                </li>
+                <li class="item-PB" style="--i: @(Math.Round((double)Model.TaskModel.Where(c => c.Status == 4).Count() / Model.TaskModel.Count() * 100.0, MidpointRounding.AwayFromZero))">
+                    <h3>Количество просроченых задач: @Model.TaskModel.Where(c => c.Status == 4).Count() из @Model.TaskModel.Count()</h3>
+                    <ul>
+                        @foreach (var unfulfilledTasks in Model.TaskModel.Where(c => c.Status == 4))
+                        {
+                            <li>
+                                <span class="name">@unfulfilledTasks.Name</span>
+                            </li>
+                        }
+                    </ul>
+                </li>
+                <li class="item-PB" style="--i: 0">
+                    <h3>Исполнители</h3>
+                    <ul>
+                        @foreach (var user in Model.TaskModel.SelectMany(t => t.Executor.Select(e => e.user)).Distinct())
+                        {
+                            <li>
+                                <span class="name">@user.Name</span>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

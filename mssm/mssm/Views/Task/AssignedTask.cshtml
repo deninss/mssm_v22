@@ -1,0 +1,50 @@
+﻿@model TaskModel
+@{
+}
+@if (Model != null)
+{
+    <div class="item-task" id="@Model.Id" style="border-top:5px solid #@(Model.Status == 0 ? "00d700":"00daff");">
+         <div class="header-ex-task">
+            <h4>@(Model.Name != null ? Model.Name : "")</h4>
+            <div class="select-menu-task" id="select-menu-task">
+                <div class="select-btn-task" id="select-btn-task">
+                    <img src="~/Img/menu.svg" />
+                </div>
+                <ul class="options">
+                    <li class="option" id="btn-file-open-task">
+                        <input type="image"  class="input-img-dropdown" name="startDateTask" src="/Img/icon-save.png" />
+                        <span class="option-text">Скачать файл</span>
+                    </li> 
+                    <li class="option-files" id="btn-file-choose">
+                        <input type="file" id="fileInput-task" accept=".doc,.docx,.pdf,.xlsx">
+                    </li>
+                    <li class="option" id="end-task">
+                        <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-save.png" />
+                        <span class="option-text">Завершить задачу</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-ex-task">
+            @if (Model.StartDate != null || Model.EndDate != null)
+            {
+                <div class="container-date">
+                    <div class="input-group">
+                        <input type="date" class="input-date" value="@Model.StartDate.Value.ToString("yyyy-MM-dd")" id="taskStartDate" name="startDateTask" src="/Img/icon-calendar.png" disabled />
+                        <input type="date" class="input-date" value="@Model.EndDate.Value.ToString("yyyy-MM-dd")" id="taskEndDate" name="endDate" src="/Img/icon-calendar.png" disabled />
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="container-date">
+                    <div class="input-group">
+                        <input type="date" class="input-date" id="taskStartDate" placeholder="Дата начала" name="startDateTask" src="/Img/icon-calendar.png" disabled />
+                        <input type="date" class="input-date" id="taskEndDate" name="endDateTask" src="/Img/icon-calendar.png" disabled />
+                    </div>
+                </div>
+            }
+            <textarea class="input-text-descriptionvv" id="taskDescription" type="text" placeholder="Описание..." disabled>@(Model.Description != null ? Model.Description : "")</textarea>
+        </div>
+    </div>
+}

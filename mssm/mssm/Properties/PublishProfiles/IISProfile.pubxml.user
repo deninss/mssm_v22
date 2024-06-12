@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2024-06-12T08:21:29.6893367Z;False|2024-06-12T13:16:09.4650243+05:00;False|2024-06-12T13:12:46.9992138+05:00;False|2024-06-12T13:10:21.2646681+05:00;False|2024-06-12T13:10:07.5635199+05:00;False|2024-06-12T13:09:31.2954374+05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=SD\ADM%3bDatabase=Mssm%3bUser Id=sa%3bpassword=Asdfg123!%3bTrustServerCertificate=True%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Kestrel:Certificates:Development:Password">
+      <Value>Server=SD\ADM%3bDatabase=Mssm%3bUser Id=sa%3bpassword=Asdfg123!%3bTrustServerCertificate=True%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="mssm.Context.ApplicationDbContext">
+      <Value>Server=SD\ADM%3bDatabase=Mssm%3bUser Id=sa%3bpassword=Asdfg123!%3bTrustServerCertificate=True%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProjectModel>
+@{
+}
+
+<div class="container-project">
+    <div class="content-add-item">
+        @foreach (var item in Model)
+        {
+            bool hasTaskWithStatus1 = item.TaskModel.Any(t => t.Status == 1);
+            bool hasRole6 = item.DepartmentModel.SelectMany(x => x.DepartmentMembers)
+            .Any(c => c.UserContextID == ViewBag.Id && c.RoleID == 6);
+            bool role = item.DepartmentModel.SelectMany(x => x.DepartmentMembers)
+            .Any(c => c.UserContextID == ViewBag.Id && (c.RoleID == 2 || c.RoleID == 4))
+            || item.IdDirector == ViewBag.Id;
+
+            if ((hasRole6 && hasTaskWithStatus1) || !hasRole6)
+            {
+                @Html.Partial("ItemProject", (item, role))
+            }
+        }
+    </div>
+    <button class="createBlockButton" id="createBlockButton" onclick="addNewProject()">Создать проект</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>
+ 

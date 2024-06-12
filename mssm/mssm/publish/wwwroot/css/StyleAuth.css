@@ -1,0 +1,80 @@
+﻿.conteinet {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    margin: 10px;
+/*    border: 1px solid black;
+    border-radius: 20px;*/
+}
+.input {
+    background: white;
+    border-radius: 10px;
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: auto;
+    box-sizing: border-box;
+    margin-right: auto;
+    font-size: 15px;
+    outline: none;
+}
+.RememberMe {
+    outline: none;
+    background: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px; 
+    margin: 10px;
+}
+.submit {
+    background: white;
+    border-radius: 10px;
+    height: 30px;
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-right: auto;
+}
+.text-page {
+    font-size: 12px;
+    /*margin: 24px;*/
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+.Icon {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content-rr {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

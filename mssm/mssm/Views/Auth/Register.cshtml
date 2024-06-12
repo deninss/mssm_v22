@@ -1,0 +1,25 @@
+﻿@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<link rel="stylesheet" href="~/css/StyleAuth.css" asp-append-version="true" />
+<div class="conteinet">
+    <form id="registerForm" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        <img src="~/Img/user.svg" class="Icon" />
+        <input name="Name" class="input" autocomplete="name" aria-required="true" placeholder="name" />
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+        <input name="Surname" class="input" autocomplete="surname" aria-required="true" placeholder="surname" />
+        <span asp-validation-for="Input.Surname" class="text-danger"></span>
+        <input name="Patronymic" class="input" autocomplete="patronymic" aria-required="true" placeholder="patronymic" />
+        <span asp-validation-for="Input.Patronymic" class="text-danger"></span>
+        <input name="Email" class="input" autocomplete="email" aria-required="true" placeholder="email" />
+        <span asp-validation-for="Input.Email" class="text-danger"></span>
+        <input name="Password" type="password" class="input" autocomplete="new-password" aria-required="true" placeholder="password" />
+        <span asp-validation-for="Input.Password" class="text-danger"></span>
+        <input name="ConfirmPassword" type="password" class="input" autocomplete="new-password" aria-required="true" placeholder="password" />
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        <button id="registerSubmit" type="submit" class="submit">Register</button>
+        <a class="text-page" href="@Url.Action("Login", "Auth")">Назад</a>
+    </form>
+</div>

@@ -1,0 +1,61 @@
+﻿@model AddTeam
+@{
+}
+<div class="container-addgroups">
+    <h3>Создание группы</h3>
+    <div class="contentbtd">
+        <li class="tab-button" data-tab-target="#tab1">Шапка</li>
+        <li class="tab-button" data-tab-target="#tab2">Сотрудники</li>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <div class="addgroup-header">
+            <input id="Name" type="text" class="text" placeholder="Название" />
+        </div>
+    </div>
+    <div id="tab2" class="tab-content">
+        <div class="content-tab2">
+            <div class="addgroup-participants">
+                <div id="list-participants">
+                </div>
+            </div>
+            <div class="addgroup-search">
+                <input type="search" class="text" id="search-box" placeholder="Поиск" />
+                <div id="search-results">
+                </div>
+            </div>
+        </div>
+    </div>
+    <input class="btn-button" id="submit-button" type="submit" value="Создать" />
+    @* <input name="Participant" type="hidden" id="castuli" /> *@
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>
+<script>
+    $('#submit-button').on('click', function (event) {
+        event.preventDefault(); // Предотвращает стандартное действие кнопки
+        console.log('Button clicked');
+        var participantsData = [];
+        $("#list-participants li").each(function () {
+            var participantId = $(this).attr("id");
+            var participantRole = $(this).find("select.role-participant").val();
+            participantsData.push({ id: participantId, role: participantRole });
+        });
+        var name = document.getElementById('Name').value;
+        $.ajax({
+            type: "POST",
+            url: "/Team/SaveTeam",
+            data: { name: name, participants: participantsData },
+            success: function (data) {
+                netTeam(data)
+                showModal('Команда создана');
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                showModal('Ошибка создание команды');
+            }
+        });
+    });
+</script>
+ 

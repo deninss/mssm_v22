@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = mssm
+build_property.RootNamespace = mssm
+build_property.ProjectDir = C:\Users\loono\OneDrive\Рабочий стол\mssm_v2\mssm\mssm\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\loono\OneDrive\Рабочий стол\mssm_v2\mssm\mssm
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Project/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Project/ItemProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJdGVtUHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Project/ItemSubtasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJdGVtU3VidGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Project/ItemTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJdGVtVGFzay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Project/ModalWindowSettingProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxNb2RhbFdpbmRvd1NldHRpbmdQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Task/AssignedTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xBc3NpZ25lZFRhc2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Task/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/Departments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxEZXBhcnRtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/ModalWindowDepartment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxNb2RhbFdpbmRvd0RlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/ModalWindowTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxNb2RhbFdpbmRvd1RlYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/ModalWindowTeamGetProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxNb2RhbFdpbmRvd1RlYW1HZXRQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/TeamStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxUZWFtU3RhZmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/_SearchResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxfU2VhcmNoUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/_SearchResultsTeam.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxfU2VhcmNoUmVzdWx0c1RlYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/Team/_Team.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxfVGVhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/loono/OneDrive/Рабочий стол/mssm_v2/mssm/mssm/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

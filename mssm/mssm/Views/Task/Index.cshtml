@@ -1,0 +1,11 @@
+﻿@model IEnumerable<TaskModel>
+@{
+}
+<div class="container-task">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("AssignedTask", item)
+    }
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>

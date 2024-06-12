@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Team>
+@{
+}
+<div class="contant-team">
+    <ul>
+        @foreach (var group in Model)
+        {
+                <li class="item-team" data-id="@group.Id">
+                <a href="#" class="team-link" data-id="@group.Id">
+                    <span class="text">@group.Name</span>
+                </a>
+            </li>
+        }
+        <input type="button" value="+" class="btn-add-team" id="modal-trigger" data-controller="Team" data-action="ModalWindowTeam" />
+    </ul>
+    <div class="tab-content-team" id="tabContentTeam">
+    </div>
+</div>
+ 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>
+ 

@@ -1,0 +1,22 @@
+﻿@model (SubtasksModel, bool, int)
+@{
+}
+<div class="container-subtasks" id="@(Model.Item1 != null && Model.Item1.Id != null ? Model.Item1.Id : ViewBag.IdSubtask ?? "")">
+    @if (Model.Item1 != null && Model.Item1.Description != null)
+    {
+        <textarea class="input-text-description" id="subtasksDescription" type="text" placeholder="Описание..." @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled")>@Model.Item1.Description</textarea>
+        @if (Model.Item2 && Model.Item3 != 2)
+        {
+            <div class="container-item-subtasks">
+                <input type="image" class="input-img task-subtasks-delete" src="/Img/icon-delete.png" />
+            </div>
+        }
+    }
+    else
+    {
+        <textarea class="input-text-description" id="subtasksDescription" type="text" placeholder="Описание..."></textarea>
+        <div class="container-item-subtasks">
+            <input type="image" class="input-img task-subtasks-delete" src="/Img/icon-delete.png" />
+        </div>
+    }
+</div>

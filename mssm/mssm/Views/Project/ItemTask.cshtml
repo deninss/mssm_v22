@@ -1,0 +1,193 @@
+﻿@model (TaskAndDepartmentModel, bool,int)
+@{
+}
+<div class="new-Task" id="@(Model.Item1 != null && Model.Item1.Task.Id != null ? Model.Item1.Task.Id : ViewBag.IdTask ?? "")" style="border-top:5px solid #@(Model.Item1 != null ? Model.Item1.Task.Status == 1 ? "00daff": Model.Item1.Task.Status == 2 ? "0eff00":"f9ff00":"f9ff00");">
+    @if (Model.Item1 != null)
+    {
+        <div class="content-TND">
+            <div class="content-ID">
+                <input class="input-text" id="taskName" placeholder="Название задачи" value="@Model.Item1.Task.Name" @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled") />
+                <div class="select-menu" id="select-menu"> 
+                    <div class="select-btn" id="select-btn">
+                        <img src="~/Img/menu.svg" />
+                    </div>
+                    <ul class="options" id="options">
+                        @if (Model.Item1.Task.Status != 0 && Model.Item3 != 2)
+                        {
+                            <li class="option" id="@(Model.Item1.Task.Status == 1 ? "ok-task" : "no-task")">
+                                <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-save.png" />
+                                <span class="option-text">@(Model.Item1.Task.Status == 1 ? "Завершить" : "Отменить")</span>
+                            </li>
+                        }
+                        @if (Model.Item2 && Model.Item3 != 2)
+                        {
+                            <li class="option" id="date-task">
+                                <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-calendar.png" />
+                                <span class="option-text">Срок</span>
+                            </li>
+                            <li class="option" id="urgency-task">
+                                <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-calendar.png" />
+                                <span class="option-text">Тип задачи</span>
+                            </li>
+                        }
+                            <li class="option" id="select-btn-file">
+                                <input type="image" class="input-img-dropdown" src="/Img/icon-file.png" />
+                                <span class="option-text">Документ</span>
+                            </li>
+                            <ul class="option-File">
+                                @if (Model.Item2 && Model.Item3 != 2)
+                                {
+                                    <li class="option-files" id="btn-file-choose">
+                                        <label for="fileInput" class="custom-file-button">@(Model.Item1.Task.File != null ? "Документ загружен" : "Загрузить докуметн")</label>
+                                        <input type="file" id="fileInput" accept=".doc,.docx,.pdf,.xlsx" style="display: none;">
+                                    </li>
+                                }
+                                <li class="option-files" id="btn-file-open">
+                                    <input type="image" class="input-img-dropdown" src="/Img/icon-file.png" />
+                                    <span class="option-text">Скачать документ</span>
+                                </li>
+                            </ul>
+                        @if (Model.Item2 && Model.Item3 != 2)
+                        {    
+                            <li class="option" id="select-btn-department">
+                                <input type="image" class="input-img-dropdown" src="/Img/icon-user.png" />
+                                <span class="option-text">Ответственный</span>
+                            </li>
+                            <ul class="option-Executor">
+                                @foreach (var department in Model.Item1.Department)
+                                {
+                                    <li class="Executor" data-department-id="@department.Id">
+                                        <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-user.png" />
+                                        <span class="option-text">@department.Name</span>
+                                    </li>
+                                    <ul class="container-executor" id="container-executor-@department.Id">
+                                        @foreach (var executor in department.DepartmentMembers)
+                                        {
+                                            @if (executor.RoleID == 8)
+                                            {
+                                                var isExecutorInTask = Model.Item1.Task.Executor != null && Model.Item1.Task.Executor.Any(e => e.user != null && e.user.Id == executor.UserContext.Id);
+                                                <li data-id="@executor.UserContext.Id" class="@(isExecutorInTask ? "executor-in-task" : "")">
+                                                    <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-user.png" />
+                                                    <span class="option-text">@executor.UserContext.UserName</span>
+                                                </li>
+                                            }
+                                        }
+                                    </ul>
+                                }
+                            </ul>
+                            <li class="option" id="task-subtasks">
+                                <input type="image" class="input-img-dropdown" src="/Img/icon-subtasks.png" />
+                                <span class="option-text">Подзадачи</span>
+                            </li>
+                            <li class="option">
+                                <input type="image" class="input-img-dropdown task-delete" src="/Img/icon-delete.png" />
+                                <span class="option-text">Удалить</span>
+                            </li>
+                        }
+                       
+                    </ul>
+                </div>
+            </div>
+            <textarea class="input-text-descriptionvv" id="taskDescription" type="text" placeholder="Описание..." @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled")>@Model.Item1.Task.Description</textarea>
+            @if (Model.Item1.Task.StartDate != null || Model.Item1.Task.EndDate != null)
+            {
+                <div class="input-group-project-date">
+                    <input type="date" value="@Model.Item1.Task.StartDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="start-date-task" name="start-date" @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled")>
+                    <input type="date" value="@Model.Item1.Task.EndDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="end-date-task" name="end-date" @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled")>
+                </div>
+            }
+        </div>
+        <div class="subtasks">
+            @if (Model.Item1 != null)
+            {
+                @foreach (var subtask in Model.Item1.Task.SubtasksModel?.Where(t => t.TaskId == Model.Item1.Task.Id))
+                {
+                    @if (Model.Item2)
+                    {
+                        @Html.Partial("ItemSubtasks", (subtask, (bool)true, Model.Item3))
+                    }
+                    else
+                    {
+                        @Html.Partial("ItemSubtasks", (subtask, (bool)false, Model.Item3))
+                    }
+                }
+            }
+        </div>
+        <div class="item-user">
+            <div>
+                @if (Model.Item1.Task.TypeId != null)
+                {
+                    <select id="status-task" @(Model.Item2 && Model.Item3 != 2 ? "" : "disabled")>
+                        <option id="1" @(Model.Item1.Task.TypeId == 1 ? "selected" : "")>важно, срочно</option>
+                        <option id="2" @(Model.Item1.Task.TypeId == 2 ? "selected" : "")>важно, не срочно</option>
+                        <option id="3" @(Model.Item1.Task.TypeId == 3 ? "selected" : "")>неважно, срочно</option>
+                        <option id="4" @(Model.Item1.Task.TypeId == 4 ? "selected" : "")>неважно, не срочно</option>
+                    </select>
+                }
+            </div>
+            @foreach (var executeUser in Model.Item1.Task.Executor)
+            {
+                <img class="input-img" src="~/Img/user.svg" />
+            }
+        </div>
+    }
+    else
+    {
+        <div class="content-TND">
+            <div class="content-ID">
+                <input class="input-text" id="taskName" placeholder="Название задачи" />
+                <div class="select-menu" id="select-menu">
+                    <div class="select-btn" id="select-btn">
+                        <img src="~/Img/menu.svg" />
+                    </div>
+                    <ul class="options">
+                        <li class="option" id="date-task">
+                            <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-calendar.png" />
+                            <span class="option-text">Срок</span>
+                        </li>
+                        <li class="option" id="urgency-task">
+                            <input type="image" class="input-img-dropdown" name="startDateTask" src="/Img/icon-calendar.png" />
+                            <span class="option-text">Тип задачи</span>
+                        </li>
+                        <li class="option" id="select-btn-file">
+                            <input type="image" class="input-img-dropdown" src="/Img/icon-file.png" />
+                            <span class="option-text">Документ</span>
+                        </li>
+                        <ul class="option-File">
+                            <li class="option-files" id="btn-file-choose">
+                                <input type="file" id="fileInput" value="Загрузить документ" accept=".doc,.docx,.pdf" />
+                            </li>
+                            <li class="option-files" id="btn-file-open">
+                                <input type="image" class="input-img-dropdown" src="/Img/icon-file.png" />
+                                <span class="option-text">Скачать документ</span>
+                            </li>
+                        </ul>
+                        <li class="option" id="select-btn-department">
+                            <input type="image" class="input-img-dropdown" src="/Img/icon-user.png" />
+                            <span class="option-text">Ответственный</span>
+                        </li>
+                        <ul class="option-Executor">
+                        </ul>
+                        <li class="option" id="task-subtasks">
+                            <input type="image" class="input-img-dropdown" src="/Img/icon-subtasks.png" />
+                            <span class="option-text">Подзадачи</span>
+                        </li>
+                        <li class="option">
+                            <input type="image" class="input-img-dropdown task-delete" src="/Img/icon-delete.png" />
+                            <span class="option-text">Удалить</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <textarea class="input-text-descriptionvv" id="taskDescription" type="text" placeholder="Описание..."></textarea> 
+        </div>
+        <div class="subtasks">
+        </div>
+        <div class="item-user">
+            <div>
+                
+            </div>
+             
+        </div>
+    } 
+</div>

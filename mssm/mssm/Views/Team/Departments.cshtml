@@ -1,0 +1,147 @@
+﻿@model DepartmentModel
+@{
+}
+<div class="container-team"> 
+    <div class="container-team-PS">
+        <div class="container-team-ptoject">
+            <h5>Проекты</h5>
+            @if (Model.ProjectModel.Any())
+            {
+                @foreach (var project in Model.ProjectModel)
+                {
+                    <a href="#" data-team="@project.Id" data-controller="Team" data-action="ModalWindowTeamGetProject">
+                        <div class="team-project">
+                            <h4>Название: @project.Name</h4>
+                            <h4>Кол-во задач: @project.TaskModel.Count</h4>
+                        </div>
+                    </a>
+
+                }
+            }
+            else
+            {
+            <a href="#">
+                <div class="team-project">
+                    <h4>Проектов нет</h4>
+                </div>
+            </a>
+            }
+        </div>
+        <div class="container-team-staff">
+            <h5>Сотрудники</h5>
+            <div class="container-team-staff-search">
+                <input type="search" class="text" id="search-department-staff" data-staff="@Model.Id" placeholder="Поиск по имени или роли" />
+                @if (Model.DepartmentMembers != null && Model.DepartmentMembers.Any(tm => tm.RoleID == 2 && tm.UserContextID == ViewBag.Id || tm.RoleID == 4 && tm.UserContextID == ViewBag.Id))
+                {
+                    <img class="icon-menu" src="~/Img/icon-add.png" style="margin-left:5px;" />
+                }
+            </div>
+            <ul id="department-member-list">
+                @if (Model.DepartmentMembers != null && Model.DepartmentMembers.Any())
+                {
+                    @foreach (var user in Model.DepartmentMembers)
+                    {
+                        <li id="@user.Id">
+                            <span class="name">@user.UserContext.UserName</span>
+                            @if (Model.DepartmentMembers != null && Model.DepartmentMembers.Any(tm => tm.RoleID == 2 && tm.UserContextID == ViewBag.Id || tm.RoleID == 4 && tm.UserContextID == ViewBag.Id))
+                            {
+                                <select id="update-role-team" data-type="department">
+                                    <option id="2" @(user.Role.Id == 2 ? "selected" : "")>Руководитель</option>
+                                    <option id="4" @(user.Role.Id == 4 ? "selected" : "")>Администратор</option>
+                                    <option id="6" @(user.Role.Id == 6 ? "selected" : "")>Менеджер</option>
+                                    <option id="8" @(user.Role.Id == 8 ? "selected" : "")>Сотрудник</option>
+                                </select>
+                                <button class="clear-user" id="clear-department-staff">X</button>
+                            }
+                            else
+                            {
+                                <span class="role">@user.Role.NameRole</span>
+                            }
+                        </li>
+                    }
+                }
+                else
+                {
+                    <p>Коллекция TeamMember пуста или не существует.</p>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="container-team-statistic">
+        <h5>Статистика</h5>
+        <div>
+            <div class="box">
+                <div class="percent" style="--i: @(Model.ProjectModel.Count(x => x.Status == 1) > 0 ?Math.Round((double)Model.ProjectModel.Count(x => x.Status == 2)/Model.ProjectModel.Count(x => x.Status == 1) * 100.0, MidpointRounding.AwayFromZero): 0)">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                        <h2>@Model.ProjectModel.Count(x => x.Status == 2) из @Model.ProjectModel.Count(x => x.Status == 1)</h2>
+                    </div>
+                </div>
+                <h2 class="text">Выполнено</h2>
+            </div>
+            <div class="box">
+                <div class="percent" style="--i: @(Model.ProjectModel.Count(x => x.Status == 1) > 0 ?Math.Round((double)Model.ProjectModel.Count(x => x.Status == 3)/Model.ProjectModel.Count(x => x.Status == 1) * 100.0, MidpointRounding.AwayFromZero):0)">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                        <h2><h2>@Model.ProjectModel.Count(x => x.Status == 3) из @Model.ProjectModel.Count(x => x.Status == 1)</h2>
+                    </div>
+                </div>
+                <h2 class="text">Просрочено</h2>
+            </div>
+
+        </div>
+    </div>
+    @if (Model.DepartmentMembers != null && Model.DepartmentMembers.Any(tm => tm.RoleID == 2 && tm.UserContextID == ViewBag.Id || tm.RoleID == 4 && tm.UserContextID == ViewBag.Id))
+   {
+       <div class="container-team-setting">
+            <h5>Настройки</h5>
+            <div class="content-team-setting">
+                <input type="text" class="text" placeholder="Название" />
+                <input type="submit" value="Изменить" class="btn-button" />
+                <input type="submit" value="Удалить" class="btn-button" id="delete-department" data-delete="@Model.Id" />
+            </div>
+       </div>
+    }
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('.icon-menu').on('click', function () {
+        var searchInputuser = $('#search-department-staff');
+        var searchInput = $('#search-department-staff-user');
+        if (searchInputuser.attr('id') === 'search-department-staff') {
+            searchInputuser.attr('id', 'search-department-staff-user');
+            searchInputuser.attr('placeholder', 'Поиск новых пользователей');
+            $('#department-member-list').empty();
+        }
+        else if (searchInput.attr('id') === 'search-department-staff-user') {
+            searchInput.attr('id', 'search-department-staff');
+            searchInput.attr('placeholder', 'Поиск по имени или роли');
+            $('#department-member-list').empty();
+            updateDepartmentMemberList();
+        }
+    });
+
+    $(document).ready(function () {
+        $('#search-department-staff').on('input', function () {
+            var searchTerm = $(this).val().toLowerCase();
+
+            $('#department-member-list li').each(function () {
+                var name = $(this).find('.name').text().toLowerCase();
+                var role = $(this).find('.role').text().toLowerCase();
+
+                // Проверяем, содержит ли имя или роль введенный текст
+                if (name.indexOf(searchTerm) > -1 || role.indexOf(searchTerm) > -1) {
+                    $(this).show(); // Показываем элемент, если текст найден в имени или роли
+                } else {
+                    $(this).hide(); // Скрываем элемент, если текст не найден
+                }
+            });
+        });
+    });
+</script>

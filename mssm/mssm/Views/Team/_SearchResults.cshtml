@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SearchModel>
+@{
+} 
+<ul>
+    @foreach (var item in Model)
+    {
+        <li id="@item.Id"><span>@item.UserName</span>
+            <select class="role-participant">
+                @foreach(var role in item.Role)
+                {
+                    <option value="@role.Id">@role.NameRole</option>
+                }
+            </select>     
+            <button class="clear-participant">X</button>
+        </li>
+    }
+</ul>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>

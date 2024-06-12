@@ -1,0 +1,65 @@
+﻿@model Team
+@{
+}
+<div class="container-addgroups">
+    <h3>Создание отдела</h3>
+    <div class="content-AD">
+        <div class="contentbtd">
+            <li class="tab-button" data-tab-target="#tab1">Шапка</li>
+            <li class="tab-button" data-tab-target="#tab2">Сотрудники</li>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <div class="addgroup-header">
+                <input id="Name" type="text" class="text" placeholder="Название" />
+                <textarea id="Description" class="input-text-purposes" type="text" placeholder="Цели..."></textarea>
+            </div>
+        </div>
+        <div id="tab2" class="tab-content">
+            <div class="content-tab2">
+                <div class="addgroup-participants">
+                    <div id="list-participants">
+                    </div>
+                </div>
+                <div class="addgroup-search">
+                    <input type="search" class="text" id="search-box-Departments" data-team="@ViewBag.IdTeam" placeholder="Поиск" />
+                    <div id="search-results-Departments">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input class="btn-button" id="submit-button-Departments" type="submit" value="Создать" />
+        @*   <input name="Participant" type="hidden" id="castuli-department" />
+        <input type="hidden" name="TeamId" value="@ViewBag.IdTeam" /> *@
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/addGroup.js"></script>
+<script>
+    $('#submit-button-Departments').on('click', function (event) {
+        event.preventDefault(); // Предотвращает стандартное действие кнопки
+        console.log('Button clicked');
+        var Participants = [];
+        $("#list-participants li").each(function () {
+            var participantId = $(this).attr("id");
+            var participantRole = $(this).find("select.role-participant").val();
+            Participants.push({ id: participantId, role: participantRole });
+        });
+        var TeamId = $('#search-box-Departments').data('team'); // Assuming ViewBag.IdTeam is set on the search box
+        console.log(TeamId); // Выводит значение TeamId в консоль браузера
+        var Name = $('#Name').val();
+        var Description = $('#Description').val();
+        $.ajax({
+            type: "POST",
+            url: "/Team/SaveDepartments",
+            data: { TeamId: TeamId, Name: Name, Description: Description, Participants: Participants },
+            success: function (data) {
+                netDepartment(data)
+                showModal('Отдел создана');
+            },
+            error: function (xhr, status, error) {
+                showModal('Ошибка создание отдела');
+            }
+        });
+    });
+</script>

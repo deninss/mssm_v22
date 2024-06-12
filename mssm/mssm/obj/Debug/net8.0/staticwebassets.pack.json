@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\calendars.svg",
+      "PackagePath": "staticwebassets\\Img\\calendars.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\group.svg",
+      "PackagePath": "staticwebassets\\Img\\group.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-add.png",
+      "PackagePath": "staticwebassets\\Img\\icon-add.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-calendar.png",
+      "PackagePath": "staticwebassets\\Img\\icon-calendar.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-delete.png",
+      "PackagePath": "staticwebassets\\Img\\icon-delete.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-file.png",
+      "PackagePath": "staticwebassets\\Img\\icon-file.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-goals-and-objectives.png",
+      "PackagePath": "staticwebassets\\Img\\icon-goals-and-objectives.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-notepad.png",
+      "PackagePath": "staticwebassets\\Img\\icon-notepad.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-save.png",
+      "PackagePath": "staticwebassets\\Img\\icon-save.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-subtasks.png",
+      "PackagePath": "staticwebassets\\Img\\icon-subtasks.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\icon-user.png",
+      "PackagePath": "staticwebassets\\Img\\icon-user.png"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\logout.svg",
+      "PackagePath": "staticwebassets\\Img\\logout.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\menu.svg",
+      "PackagePath": "staticwebassets\\Img\\menu.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\minus.svg",
+      "PackagePath": "staticwebassets\\Img\\minus.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\pluss.svg",
+      "PackagePath": "staticwebassets\\Img\\pluss.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\projects.svg",
+      "PackagePath": "staticwebassets\\Img\\projects.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\tasks.svg",
+      "PackagePath": "staticwebassets\\Img\\tasks.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\Img\\user.svg",
+      "PackagePath": "staticwebassets\\Img\\user.svg"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\css\\StyleAuth.css",
+      "PackagePath": "staticwebassets\\css\\StyleAuth.css"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\css\\StyleContent.css",
+      "PackagePath": "staticwebassets\\css\\StyleContent.css"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\css\\StyleProject.css",
+      "PackagePath": "staticwebassets\\css\\StyleProject.css"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\js\\addGroup.js",
+      "PackagePath": "staticwebassets\\js\\addGroup.js"
+    },
+    {
+      "Id": "C:\\Users\\loono\\OneDrive\\Рабочий стол\\mssm_v2\\mssm\\mssm\\wwwroot\\js\\sidebar.js",
+      "PackagePath": "staticwebassets\\js\\sidebar.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.mssm.props",
+      "PackagePath": "build\\mssm.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.mssm.props",
+      "PackagePath": "buildMultiTargeting\\mssm.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.mssm.props",
+      "PackagePath": "buildTransitive\\mssm.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.mssm.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

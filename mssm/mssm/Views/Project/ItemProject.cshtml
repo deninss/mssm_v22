@@ -1,0 +1,125 @@
+﻿@model (ProjectModel,bool)
+
+@{
+    // bool isDirectorOrAdmin = Model.Item1.DepartmentModel != null && (Model.Item1.IdDirector == Model.Item2 || Model.Item1.de);
+    // bool hasAccessToTasks = Model.Item1.DepartmentModel.Any(x => x.DepartmentMembers.Any(c => c.RoleID == 6 && c.UserContextID == Model.Item2 && (Model.Item1.TaskModel.Any(s => s.Status == 1) || Model.Item1.TaskModel.Any(s => s.Status == 2))));
+} 
+
+<div class="new-Project" id="@(Model.Item1 != null && Model.Item1.Id != null ? Model.Item1.Id : ViewBag.IdProject ?? "")">
+    @if (ViewBag.IdProject == null)
+    {
+        <div class="content-ND">
+            <div class="content-TND">
+                <div class="content-ID">
+                    <h4>@(Model.Item1.Status == 1 ? "Разработка" : Model.Item1.Status == 2 ? "Завершено" : "Создание")</h4>
+                    @if (Model.Item2 && Model.Item1.Status != 2)
+                    {
+                        <div class="select-menu" id="select-menu">
+                            <div class="select-btn" id="select-btn">
+                                <img src="~/Img/menu.svg" />
+                            </div>
+                            <ul class="options">
+                                <li class="option" id="setting-project" data-controller="Project" data-action="ModalWindowSettingProject">
+                                    <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                                    <span class="option-text">Настройки</span>
+                                </li>
+                                <li class="option" id="date-project">
+                                    <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                                    <span class="option-text">Срок</span>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+                @if (Model.Item1.Name != null)
+                {
+                    <input class="input-text" id="projectName" placeholder="Название проекта" value="@Model.Item1.Name" @(Model.Item2 && Model.Item1.Status != 2 ? "" : "disabled")>
+                }
+                else
+                {
+                    <input class="input-text" id="projectName" placeholder="Название проекта" />
+                }
+                @if (Model.Item1.Description != null)
+                {
+                    <textarea class="input-text-descriptionvv" id="projectDescription" type="text" placeholder="Описание..." @(Model.Item2 && Model.Item1.Status != 2 ? "" : "disabled")>@Model.Item1.Description</textarea>
+                }
+                else
+                {
+                    <textarea class="input-text-descriptionvv" id="projectDescription" type="text" placeholder="Описание..."></textarea>
+                }
+                @if (Model.Item1.StartDate != null || Model.Item1.EndDate != null)
+                {
+                    <div class="input-group-project-date">
+                        <input type="date" value="@Model.Item1.StartDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="start-date-project" name="start-date" @(Model.Item2 && Model.Item1.Status != 2 ? "" : "disabled")>
+                        <input type="date" value="@Model.Item1.EndDate.Value.ToString("yyyy-MM-dd")" class="input-date" id="end-date-project" name="end-date" @(Model.Item2 && Model.Item1.Status != 2 ? "" : "disabled")>
+                    </div>
+                }
+            </div>
+        </div>
+        @if (Model.Item1.TaskModel != null && Model.Item1.TaskModel.Any())
+        {
+            foreach (var task in Model.Item1.TaskModel.Where(t => t.ProjectId == Model.Item1.Id))
+            {
+                var department = Model.Item1.DepartmentModel.Where(d => d.ProjectModel.Any(p => p.Id == Model.Item1.Id));
+                var taskAndDepartment = new TaskAndDepartmentModel { Task = task, Department = department };
+                @Html.Partial("ItemTask", (taskAndDepartment, Model.Item2,Model.Item1.Status))
+            }
+        }
+        @if (Model.Item2)
+        {
+            <div class="container-project-footer">
+                @if(Model.Item1.Status == 0)
+                {
+                    <button class="btn-project-start" id="start-project" data-end="false">Запустить проект</button>
+                }
+                else if (Model.Item1.Status == 1)
+                {
+                    <button class="btn-project-start" id="start-project" data-end="true">Завершить проект</button>
+                }
+                else if (Model.Item1.Status == 2)
+                {
+                    <button class="btn-project-start project-delete"  data-end="true">Удалить проект</button>
+                }
+                @if (Model.Item1.Status != 2)
+                {
+                    <input type="image" class="input-img add-task" src="/Img/pluss.svg" />
+                    <input type="image" class="input-img project-delete" src="/Img/icon-delete.png" />
+                }
+            </div>
+        }
+        
+    }
+    else
+    {
+    <div class="content-ND">
+        <div class="content-TND">
+            <div class="content-ID">
+                <h4>Создание</h4>
+                <div class="select-menu" id="select-menu">
+                    <div class="select-btn" id="select-btn">
+                        <img src="~/Img/menu.svg" />
+                    </div>
+                    <ul class="options">
+                        <li class="option" id="setting-project" data-controller="Project" data-action="ModalWindowSettingProject">
+                            <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                            <span class="option-text">Настройки</span>
+                        </li>
+                        <li class="option" id="date-project">
+                            <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                            <span class="option-text">Срок</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <input class="input-text" id="projectName" placeholder="Название проекта" />
+            <textarea class="input-text-descriptionvv" id="projectDescription" type="text" placeholder="Описание..."></textarea>
+        </div>
+    </div>
+    <div class="container-project-footer">
+        <button class="btn-project-start" id="start-project">Запустить проект</button>
+        <input type="image" class="input-img add-task" src="/Img/pluss.svg" />
+        <input type="image" class="input-img project-delete" src="/Img/icon-delete.png" />
+    </div>
+    }
+  
+</div>

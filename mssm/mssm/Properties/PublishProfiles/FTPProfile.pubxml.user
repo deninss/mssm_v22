@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>
+    </EncryptedPassword>
+    <History>False|2024-05-31T09:54:17.9456779Z;</History>
+    <LastFailureDetails />
+    <_PublishTargetUrl>ftp://90.156.217.255/dp.ldv_90.156.217.255</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>032dc77f-7694-4080-a787-150d0c4a200e</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="mssm.Context.ApplicationDbContext">
+      <Value>032dc77f-7694-4080-a787-150d0c4a200e</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

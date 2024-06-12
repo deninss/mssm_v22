@@ -1,0 +1,11 @@
+﻿@model ICollection<TeamMembers>
+@{
+}
+@foreach (var user in Model)
+{
+    <li id="@user.Id">
+        <span class="name">@user.UserContext.UserName</span>
+        <span class="role">@user.Role.NameRole</span>
+        <button class="clear-user" id="clear-team-staff">X</button>
+    </li>
+}

@@ -1,0 +1,88 @@
+﻿@model SettingProjectModel
+@{
+}
+<div class="setting-project" id="@Model.Project.Id">
+    <div id="tabs">
+        <ul>
+            @*  <li><a href="#tab1">Сроки</a></li> *@
+            <li><a href="#tab2">Исполнитель</a></li>
+        </ul> 
+        <div id="tab2" class="dd">
+            <h3>Сроки проекта</h3>
+            @foreach (var team in Model.Team)
+            {
+                <div class="team-member">
+                    <div class="member-info" id="@team.Id" onclick="toggleDetails(this)">
+                        <span class="name">Команда: @team.Name</span>
+                        @* <input type="checkbox" /> *@
+                    </div>
+                    <div class="member-details" style="display: none;">
+                        @foreach (var department in team.DepartmentModels)
+                        {
+                            <div class="detail" id="@department.Id">
+                                <span class="name">Отдел: @department.Name</span>
+                                <input type="checkbox" class="department-checkbox"@(department.ProjectModel.Any(p => p.Id == Model.Project.Id) ? "checked" : "") />
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            <button class="btn-button" onclick="submitForm()">Сохранить</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#tabs ul li a').click(function (e) {
+            e.preventDefault();
+            var $this = $(this),
+                tabId = $this.attr('href');
+
+            $('#tabs ul li a').removeClass('active');
+            $this.addClass('active');
+
+            $('#tabs div').removeClass('active');
+            $(tabId).addClass('active');
+        });
+    });
+    function toggleDetails(element) {
+        var memberDetails = element.parentElement.querySelector('.member-details');
+        if (memberDetails.style.display === 'none') {
+            memberDetails.style.display = 'block';
+        } else {
+            memberDetails.style.display = 'none';
+        }
+    }
+    function submitForm() {
+        var Executor = [];
+        var uncheckedDepartments = [];
+        var checkboxes = document.querySelectorAll('.department-checkbox');
+        var ProjectID = $('.setting-project').attr('id');
+
+        checkboxes.forEach(function (checkbox) {
+            var detailElement = checkbox.closest('.detail');
+            var departmentId = detailElement.id;
+
+            if (checkbox.checked) {
+                Executor.push(departmentId);
+            } else {
+                uncheckedDepartments.push(departmentId);
+            }
+        });
+
+        $.ajax({ 
+            type: "POST",
+            url: "/Project/SaveExecutorDepartment",
+            data: { ProjectID: ProjectID, Executor: Executor, UncheckedDepartments: uncheckedDepartments },
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                showModal('Настройки изменены');
+            },
+            error: function (xhr, status, error) {
+                console.log(error);
+                showModal('Ошибка изменения настроек');
+            }
+        });
+    } 
+</script>

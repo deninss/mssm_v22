@@ -1,0 +1,246 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\services\\iauth\\_auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\services\\iauth\\_auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\services\\iemail\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\services\\iemail\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\services\\iproject\\_project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\services\\iproject\\_project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\models\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\models\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\models\\projectmodel\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\models\\projectmodel\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\models\\projectmodel\\taskanddepartmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\models\\projectmodel\\taskanddepartmentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\models\\projectmodel\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\models\\projectmodel\\projectmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\models\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\models\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\views\\project\\modalwindowsettingproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\views\\project\\modalwindowsettingproject.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\views\\task\\assignedtask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\views\\task\\assignedtask.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|c:\\users\\loono\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\wwwroot\\js\\addgroup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8FAF0247-FF78-4AB9-8C63-87068777B034}|mssm\\mssm.csproj|solutionrelative:mssm\\wwwroot\\js\\addgroup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Project.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IProject\\_Project.cs",
+              "RelativeDocumentMoniker": "mssm\\Services\\IProject\\_Project.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IProject\\_Project.cs",
+              "RelativeToolTip": "mssm\\Services\\IProject\\_Project.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwCcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T13:31:17.633Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Auth.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IAuth\\_Auth.cs",
+              "RelativeDocumentMoniker": "mssm\\Services\\IAuth\\_Auth.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IAuth\\_Auth.cs",
+              "RelativeToolTip": "mssm\\Services\\IAuth\\_Auth.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAcwEwAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:45:00.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IEmail\\EmailService.cs",
+              "RelativeDocumentMoniker": "mssm\\Services\\IEmail\\EmailService.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Services\\IEmail\\EmailService.cs",
+              "RelativeToolTip": "mssm\\Services\\IEmail\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:42:51.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Participant.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\Participant.cs",
+              "RelativeDocumentMoniker": "mssm\\Models\\Participant.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\Participant.cs",
+              "RelativeToolTip": "mssm\\Models\\Participant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T04:26:41.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskAndDepartmentModel.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\TaskAndDepartmentModel.cs",
+              "RelativeDocumentMoniker": "mssm\\Models\\ProjectModel\\TaskAndDepartmentModel.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\TaskAndDepartmentModel.cs",
+              "RelativeToolTip": "mssm\\Models\\ProjectModel\\TaskAndDepartmentModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T04:22:45.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectModel.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\ProjectModel.cs",
+              "RelativeDocumentMoniker": "mssm\\Models\\ProjectModel\\ProjectModel.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\ProjectModel.cs",
+              "RelativeToolTip": "mssm\\Models\\ProjectModel\\ProjectModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T04:22:30.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\TaskModel.cs",
+              "RelativeDocumentMoniker": "mssm\\Models\\ProjectModel\\TaskModel.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\ProjectModel\\TaskModel.cs",
+              "RelativeToolTip": "mssm\\Models\\ProjectModel\\TaskModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T04:20:50.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\File.cs",
+              "RelativeDocumentMoniker": "mssm\\Models\\File.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Models\\File.cs",
+              "RelativeToolTip": "mssm\\Models\\File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T04:18:59.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModalWindowSettingProject.cshtml",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Views\\Project\\ModalWindowSettingProject.cshtml",
+              "RelativeDocumentMoniker": "mssm\\Views\\Project\\ModalWindowSettingProject.cshtml",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Views\\Project\\ModalWindowSettingProject.cshtml",
+              "RelativeToolTip": "mssm\\Views\\Project\\ModalWindowSettingProject.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T04:17:25.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssignedTask.cshtml",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Views\\Task\\AssignedTask.cshtml",
+              "RelativeDocumentMoniker": "mssm\\Views\\Task\\AssignedTask.cshtml",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Views\\Task\\AssignedTask.cshtml",
+              "RelativeToolTip": "mssm\\Views\\Task\\AssignedTask.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-08T14:27:00.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "mssm\\Controllers\\TaskController.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "mssm\\Controllers\\TaskController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAywCcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T14:26:12.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "addGroup.js",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\wwwroot\\js\\addGroup.js",
+              "RelativeDocumentMoniker": "mssm\\wwwroot\\js\\addGroup.js",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\wwwroot\\js\\addGroup.js",
+              "RelativeToolTip": "mssm\\wwwroot\\js\\addGroup.js",
+              "ViewState": "AQIAAPQBAAAAAAAAAAAgwBMCAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-08T13:45:21.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "mssm\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\loono\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\mssm_v2\\mssm\\mssm\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "mssm\\Controllers\\ProjectController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAQwF0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T13:43:11.984Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<link rel="stylesheet" href="~/css/StyleContent.css" asp-append-version="true" />
+<body>
+    <div class="container">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="sidebar active">
+              @*   <div class="menu-btn">
+                    <img src="~/Img/menu.svg" />
+                </div> *@
+               @*  <div class="head">
+                    <div class="user-img">
+                        <img src="~/Img/user.svg" />
+                    </div>
+                    <div class="user-details">
+                        <p class="title">developer</p>
+                        <p class="name">@ViewBag.UserName</p>
+                    </div>
+                </div> *@
+                <div class="navs">
+                    <div class="menu">
+                        @* <p class="title">main</p> *@
+                        <ul>
+                          @*   <li>
+                                <a href="@Url.Action("calendar", "Home")">
+                                    <img class="icon-menu" src="~/Img/icon-calendar.png" />
+                                    <span class="text">Калундась</span>
+                                </a>
+                            </li> *@
+                            <li>
+                                <a href="@Url.Action("project", "Home")">
+                                    <img class="icon-menu" src="~/Img/icon-goals-and-objectives.png" />
+                                    <span class="text">Проекты</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("task", "Home")">
+                                    <img class="icon-menu" src="~/Img/tasks.svg" />
+                                    <span class="text">Задачи</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("team", "Home")">
+                                    <img class="icon-menu" src="~/Img/group.svg" />
+                                    <span class="text">Группы</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    @* <p class="title">Account</p> *@
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("Logout", "Auth")">
+                                <img class="icon-menu" src="~/Img/logout.svg" />
+                                <span class="text">Выйти</span>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        }
+        <div class="content-main">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="modal" id="my-modal">
+        <div class="modal-window">
+            @* <h3>Создание группы</h3> *@
+            <button class="btn-close">X</button>
+            <div class="content-modal">
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <div class="modalss" id="my-modalss">
+        <div class="modal-windowss">
+            <button class="btn-closess">X</button>
+            <div class="content-modalss">
+                <h3 id="modal-title"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 
+  

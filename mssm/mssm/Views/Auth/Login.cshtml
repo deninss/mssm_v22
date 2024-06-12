@@ -1,0 +1,25 @@
+﻿@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+<link rel="stylesheet" href="~/css/StyleAuth.css" asp-append-version="true" />
+<div class="conteinet">
+    <form id="account" asp-controller="Auth" asp-action="Login" method="post"> 
+        <img src="~/Img/user.svg" class="Icon" />
+        <input name="Email" class="input" autocomplete="username" aria-required="true" placeholder="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <input name="Password" type="password" class="input" autocomplete="current-password" aria-required="true" placeholder="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <label asp-for="RememberMe" style="color:black;">
+            <input type="checkbox" class="RememberMe" name="RememberMe" />
+            @Html.DisplayNameFor(m => m.RememberMe)
+        </label>
+        
+        <button id="login-submit" type="submit" class="submit">Log in</button>
+        <div class="content-rr">
+            <a class="text-page" id="forgot-password">Забыли пароль?</a>
+            <a class="text-page" href="@Url.Action("Register", "Auth")">Регистрация</a>
+        </div>
+  
+    </form>
+</div>
